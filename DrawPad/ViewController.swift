@@ -1,30 +1,7 @@
-/// Copyright (c) 2018 Razeware LLC
+
+
 ///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
+
 
 import UIKit
 
@@ -67,7 +44,14 @@ class ViewController: UIViewController {
   @IBAction func resetPressed(_ sender: Any) {
     mainImageView.image = nil
   }
-  
+    
+    @IBAction func randomWord(_ sender: UIButton) {
+        let nounarray = ["Pencil", "Peanut","Cherry","Airplane","Alien","Tiger","Elephant","Spongebob","Squidward","Buggs Bunny","Guitar","Skyscraper","Car","Lion","Eiffel Tower","Strawberry","Homer Simpson","Ship","Sun","Whale","Gorilla","Banana","Rocket","Basketball","Football","Tree","Todd","Shoe","Nike Logo","Disco Ball","Beach","Turtle","Saturn","Earth","Baseball","Tennis Ball","Scooby Doo","Tom and Jerry","Scissors","US Flag","Bear","Pumpkin","Ninja","Hulk","Captain America","Thanos","Superman","Batman","Joker","Grapes","Bird","Pizza","Pumpkin","Giraffe","Snowflake","Cat","Moon","Ice cream","Owl","Piano","Pirate","Watermelon","Waffle","Spider","Spiderman","Skull","Cow","Rainbow","Ghost","Headphones","Cupcake","Desert","T-Rex","Panda","Baby Yoda","Yoshi","Mario","Duck","Bus","Lollipop","King","Cloud","Helicopter","Leaf","Mountain","Flower","Cookie","Hamburger","Frog","Dragon","Mickey Mouse",]
+        wordRandom.text = nounarray.randomElement()!
+        
+    }
+    @IBOutlet weak var wordRandom: UITextField!
+    
   @IBAction func sharePressed(_ sender: Any) {
     guard let image = mainImageView.image else {
       return
