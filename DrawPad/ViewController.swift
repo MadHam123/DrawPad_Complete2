@@ -9,13 +9,18 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var mainImageView: UIImageView!
   @IBOutlet weak var tempImageView: UIImageView!
-  
+
+    
+    
+    @IBOutlet weak var randomWord: UIButton!
+    
   
   var lastPoint = CGPoint.zero
   var color = UIColor.black
   var brushWidth: CGFloat = 10.0
   var opacity: CGFloat = 1.0
   var swiped = false
+  
  
   
   
@@ -46,13 +51,23 @@ class ViewController: UIViewController {
   }
     
     @IBAction func randomWord(_ sender: UIButton) {
-        let nounarray = ["Pencil", "Peanut","Cherry","Airplane","Alien","Tiger","Elephant","Spongebob","Squidward","Buggs Bunny","Guitar","Skyscraper","Car","Lion","Eiffel Tower","Strawberry","Homer Simpson","Ship","Sun","Whale","Gorilla","Banana","Rocket","Basketball","Football","Tree","Todd","Shoe","Nike Logo","Disco Ball","Beach","Turtle","Saturn","Earth","Baseball","Tennis Ball","Scooby Doo","Tom and Jerry","Scissors","US Flag","Bear","Pumpkin","Ninja","Hulk","Captain America","Thanos","Superman","Batman","Joker","Grapes","Bird","Pizza","Pumpkin","Giraffe","Snowflake","Cat","Moon","Ice cream","Owl","Piano","Pirate","Watermelon","Waffle","Spider","Spiderman","Skull","Cow","Rainbow","Ghost","Headphones","Cupcake","Desert","T-Rex","Panda","Baby Yoda","Yoshi","Mario","Duck","Bus","Lollipop","King","Cloud","Helicopter","Leaf","Mountain","Flower","Cookie","Hamburger","Frog","Dragon","Mickey Mouse","Adidas Logo"]
+      
+        
+        
+        let nounarray = ["Pencil", "Peanut","Cherry","Airplane","Alien","Tiger","Elephant","Spongebob","Squidward","Buggs Bunny","Guitar","Skyscraper","Car","Lion","Eiffel Tower","Strawberry","Homer Simpson","Ship","Sun","Whale","Gorilla","Banana","Rocket","Basketball","Football","Tree","Todd","Shoe","Nike Logo","Disco Ball","Beach","Turtle","Saturn","Earth","Baseball","Tennis Ball","Scooby Doo","Tom and Jerry","Scissors","US Flag","Bear","Pumpkin","Ninja","Hulk","Captain America","Thanos","Superman","Batman","Joker","Grapes","Bird","Pizza","Pumpkin","Giraffe","Snowflake","Cat","Moon","Ice cream","Owl","Piano","Pirate","Watermelon","Waffle","Spider","Spiderman","Skull","Cow","Rainbow","Ghost","Headphones","Cupcake","Desert","T-Rex","Panda","Baby Yoda","Yoshi","Mario","Duck","Bus","Lollipop","King","Cloud","Helicopter","Leaf","Mountain","Flower","Cookie","Hamburger","Frog","Dragon","Mickey Mouse","Adidas Logo","Apple",]
         wordRandom.text = nounarray.randomElement()!
         
     }
     @IBOutlet weak var wordRandom: UITextField!
     
-  @IBAction func sharePressed(_ sender: Any) {
+ 
+   
+    
+    
+    
+    
+    
+    @IBAction func sharePressed(_ sender: Any) {
     guard let image = mainImageView.image else {
       return
     }

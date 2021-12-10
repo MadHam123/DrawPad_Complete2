@@ -278,6 +278,7 @@
                     </view>
                     <connections>
                         <outlet property="mainImageView" destination="L06-IZ-4jf" id="2kF-W3-1Le"/>
+                        <outlet property="randomWord" destination="9XZ-d8-FPC" id="T1f-OC-rJp"/>
                         <outlet property="tempImageView" destination="u6b-9L-ok0" id="cxU-Df-K3W"/>
                         <outlet property="wordRandom" destination="skT-pT-YJu" id="Hlq-P8-IQF"/>
                     </connections>
